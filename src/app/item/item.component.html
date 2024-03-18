@@ -1,0 +1,21 @@
+<div>
+  <h2>Items</h2>
+  <button (click)="openAddModal()">Add Item</button>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Enabled</th>
+      <th>Actions</th>
+    </tr>
+    <tr *ngFor="let item of items">
+      <td>{{ item.name }}</td>
+      <td>{{ item.description }}</td>
+      <td>{{ item.is_enabled ? 'Yes' : 'No' }}</td>
+      <td>
+        <button (click)="openEditModal(item)">Edit</button>
+        <button (click)="deleteItem(item.id)">Delete</button>
+      </td>
+    </tr>
+  </table>
+</div>

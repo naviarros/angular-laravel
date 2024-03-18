@@ -1,0 +1,17 @@
+<h2>Add Item</h2>
+<form (ngSubmit)="onSave()">
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" [(ngModel)]="newItem.name" name="name" required>
+  </div>
+  <div>
+    <label for="description">Description:</label>
+    <textarea id="description" [(ngModel)]="newItem.description" name="description"></textarea>
+  </div>
+  <div>
+    <label for="is_enabled">Enabled:</label>
+    <input type="checkbox" id="is_enabled" [(ngModel)]="newItem.is_enabled" name="is_enabled">
+  </div>
+  <button type="submit">Save</button>
+  <button type="button" (click)="onCancel()">Cancel</button>
+</form>
